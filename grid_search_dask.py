@@ -7,7 +7,7 @@ encoded = np.load(sys.argv[1])
 blood_types = np.load(sys.argv[2])
 print("Numpy loaded")
 from dask_ml.model_selection import GridSearchCV
-crange = np.logspace(-2, 1, 10).tolist()
+crange = np.logspace(-2.5, -2, 5).tolist()
 param_space = {"C": crange, "class_weight": [None, 'balanced']}
 
 model = LinearSVC(penalty="l1", dual=False, verbose=1, max_iter=1000)
@@ -21,4 +21,4 @@ except Exception as e:
 	print("Error: " + str(e))
 print(search.best_params_)
 from sklearn.externals import joblib
-joblib.save(search, "search.pkl")
+joblib.dump(search, "search.pkl")
