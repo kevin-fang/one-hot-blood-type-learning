@@ -1,0 +1,7 @@
+*.npy
+.ipynb_checkpoints/*
+*.txt
+untap.db
+npy_data/*
+hiq-218/*
+hiq-214/*
