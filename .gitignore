@@ -1,4 +1,5 @@
 *.npy
+snp_searching/
 .ipynb_checkpoints/*
 *.txt
 untap.db
